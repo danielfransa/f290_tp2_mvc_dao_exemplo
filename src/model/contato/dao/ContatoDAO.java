@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 import model.contato.ContatoVO;
 
-public class ContatoDAO implements IContato {
+public class ContatoDAO implements IContatoDAO {
 
     final private Connection connection;
     final private Logger logger = Logger

@@ -4,7 +4,7 @@ import java.util.List;
 
 import model.contato.ContatoVO;
 
-public interface IContato {
+public interface IContatoDAO {
     void salvar(ContatoVO pContato) throws Exception;
 
     void atualizar(ContatoVO pContato) throws Exception;
