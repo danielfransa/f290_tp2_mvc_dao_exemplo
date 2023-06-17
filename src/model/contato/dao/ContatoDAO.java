@@ -110,4 +110,24 @@ public class ContatoDAO implements IContatoDAO {
         }
     }
 
+    @Override
+    public ContatoVO buscarPorId(Integer pId) throws Exception {
+        ContatoVO contato = null;
+        String query = "SELECT id, nome, email from contatos where id = '%s'";
+
+        try (Statement stm = connection.createStatement();
+                ResultSet rst = stm.executeQuery(String.format(query, pId))) {
+            if(rst.next()) {
+                contato = new ContatoVO();
+                contato.setId(rst.getInt("id"));
+                contato.setNome(rst.getString("nome"));
+                contato.setEmail(rst.getString("email"));                
+            }
+        } catch (Exception e) {
+            logger.log(Level.SEVERE, "Falha ao buscar contato por Id.", e);
+            throw e;
+        }
+        return contato;
+    }
+
 }

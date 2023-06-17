@@ -11,10 +11,11 @@ public class App {
 
         try {
             Connection connection = ConexaoFactory.getConexao();
+            System.out.println(connection);
             ContatoDAO dao = new ContatoDAO(connection);
-            ContatoVO c1 = new ContatoVO("Joao Pedro", "jp@gmail.com");
-            // dao.salvar(c1);
-            List<ContatoVO> contatos = dao.buscarTodos();
+            ContatoVO c1 = new ContatoVO("José", "jose@gmail.com");
+            //dao.salvar(c1);
+            ContatoVO contatos = dao.buscarPorId(4);
             System.out.println(contatos);
         } catch (Exception e) {
             e.printStackTrace();
