@@ -10,7 +10,7 @@ public class ConexaoFactory {
     private static final Logger logger = Logger.getLogger(ConexaoFactory.class.getName());
     private static final String url = "jdbc:mariadb://localhost:3306/fatec";
     private static final String user = "root";
-    private static final String passwd = "";
+    private static final String passwd = "mudar123";
 
     public static Connection getConexao() throws Exception {
         try {

@@ -1,18 +1,31 @@
-## Getting Started
+# Atividade DAO:
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Instruções
+Para esta tividade iremos avançar nosso estudos na camada de dominio e finalizar a 
+atividade concluindo o DAO Pattern combinando-o com a camada de serviços.
 
-## Folder Structure
+Para consluir a atividade voces devem tomar como base o repositorio em anexo e implementar os //TODO:s e os tópicos descritos a seguir:
+Criar camada de serviços. A camada de serviços deverá acessar o DAO para realizar as operações sobre a base de dados.
+A criação da camada de serviços irá possibilitar a utilização dos testes unitários;
+Crie uma classe Playground e teste as operações disponibilizadas pela camada Service.
+Materiais de referência
 
-The workspace contains two folders by default, where:
+# Imagens após implementação:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+### Banco de Dados:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Banco de dados MariaDB em Docker acessado pelo HeidiSQL Client
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+![Imagem Banco de Dados Inicial](./storage/Banco_de_dados_inicio.JPG)
 
-## Dependency Management
+<br>
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Após chamar a aplicação pelo App segue terminal:
+
+![Resposta Terminal](./storage/Terminal.JPG)
+
+<br>
+
+Banco de dados ao final do processo:
+
+![Imagem Banco de Dados Inicial](./storage/Banco_de_dados_fim.JPG)
